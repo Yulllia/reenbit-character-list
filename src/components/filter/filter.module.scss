@@ -1,0 +1,32 @@
+@use "src/utilities/mixins" as mixin;
+@use "src/utilities/variables";
+ 
+ .onEnter {
+  position: relative;
+  margin-bottom: 61px;
+  .searchIcon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: 16px 11.51px 18.51px 19px;
+  }
+  .searchIcon:hover,
+  .searchIcon:focus {
+    cursor: variables.$cursor;
+  }
+  .input {
+    background: inherit;
+    display: variables.$display;
+    border: 1px solid variables.$dark;
+    border-radius: variables.$border-radius-base;
+    padding: 16px;
+    min-height: 56px;
+    width: 100%;
+    gap: 8px;
+    padding-left: 48px;
+  }
+
+  .input::placeholder {
+    @include mixin.text-styled(variables.$small-font-weight, variables.$small-font-size, 24px, $color:variables.$dark);
+  }
+}

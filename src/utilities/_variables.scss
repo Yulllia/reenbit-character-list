@@ -1,0 +1,52 @@
+// :root {
+//     --height: 200px;
+//     --big-height: 400px;
+//     --large-height: 550px;
+// }
+// $height: var(--height);
+// $big-height: var(--big-height);
+// $large-height: var(--large-height);
+
+// theme colors
+
+$black: #000000;
+$white: #ffffff;
+$dark: #00000080;
+$light: #f2f2f7;
+$dark-blue:#081f32;
+$grey: #6e798c;
+$grey-base: #8e8e93;
+$light-grey: #21212114;
+
+
+// font sizes
+$base-font-size: 14px;
+$small-font-size: 16px;
+$medium-font-size: 18px;
+$medium-md-font-size: 24px;
+$medium-font-size-base: 30px;
+$medium-big-font-size: 35px;
+$big-font-size: 48px;
+// position
+$display: flex;
+
+//cursor
+$cursor: pointer;
+
+// border
+$border-radius-small: 5px;
+$border-radius-base: 8px;
+$border-radius-big: 150px;
+
+// //line height
+// $base-line-height: 24px;
+// $small-line-height: 21px;
+// $medium-line-height: 27px;
+// $big-line-height: 29.26px;
+
+//font weight
+$bold-font-weight: 700;
+$medium-font-weight: 600;
+$small-font-weight: 400;
+$base-font-weight: 500;
+

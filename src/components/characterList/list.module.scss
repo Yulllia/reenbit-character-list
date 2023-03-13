@@ -1,0 +1,26 @@
+.listContainer {
+  margin: 10px auto;
+  max-width: 1020px;
+  @media screen and (max-width: 1024px) {
+    margin: 15px;
+  }
+  & > svg {
+    display: flex;
+    justify-content: center;
+    margin: 51px auto 16px auto;
+    @media screen and (max-width: 600px) {
+        width: 264px;
+        margin: 40px auto 16px auto;
+      }
+
+  }
+  .cardContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+    margin: 0 auto;
+    @media screen and (max-width: 600px) {
+      display: unset;
+    }
+  }
+}

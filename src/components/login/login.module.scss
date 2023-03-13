@@ -1,0 +1,45 @@
+@use "src/utilities/variables";
+
+.loginPage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  margin: 5px auto;
+  width: 200px;
+  margin-top: 250px;
+  .loginTitle {
+    margin-bottom: 40px;
+    font-size: variables.$medium-big-font-size;
+  }
+  button {
+    padding: 15px;
+    font-size: variables.$base-font-size;
+  }
+  .google  {
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: variables.$medium-md-font-size;
+  }
+}
+.loginInfoCotainer {
+  display: flex;
+  justify-content: flex-end;
+  .email {
+    padding-right: 30px;
+    font-size: variables.$medium-font-size;
+  }
+  .button {
+    border: none;
+    color: variables.$white;
+    padding: 5px 15px;
+    margin-right: 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: variables.$small-font-size;
+    cursor: variables.$cursor;
+    background-color: variables.$black;
+    border-radius: variables.$border-radius-small;
+  }
+}

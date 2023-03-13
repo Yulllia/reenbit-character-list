@@ -1,0 +1,58 @@
+@use "src/utilities/mixins" as mixin;
+
+.loader,
+.loader:before,
+.loader:after {
+  border-radius: 50%;
+}
+
+@mixin svg($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+
+.loader {
+  color: #ffffff;
+  font-size: 11px;
+  text-indent: -99999em;
+  margin: 55px auto;
+  position: relative;
+  @include mixin.svg(10em, 10em);
+  box-shadow: inset 0 0 0 1em;
+  @include mixin.transform(translateZ(0));
+}
+
+.loader:before,
+.loader:after {
+  position: absolute;
+  content: '';
+}
+
+.loader:before {
+  @include mixin.svg(5.2em, 10.2em);
+  @include mixin.loader-style(#0dc5c1, 10.2em 0 0 10.2em, -0.1em, -0.1em);
+  @include mixin.transform-animation(5.1em 5.1em, load2 2s infinite ease 1.5s);
+}
+.loader:after {
+  @include mixin.svg(5.2em, 10.2em);
+  @include mixin.loader-style(#0dc5c1, 0 10.2em 10.2em 0, -0.1em, 4.9em);
+  @include mixin.transform-animation(0.1em 5.1em, load2 2s infinite ease);
+}
+
+@-webkit-keyframes load2 {
+  0% {
+    @include mixin.transform(rotate(0deg));
+  }
+  100% {
+    @include mixin.transform(rotate(360deg));
+  }
+}
+@keyframes load2 {
+  0% {
+    @include mixin.transform(rotate(0deg));
+  }
+  100% {
+    @include mixin.transform(rotate(360deg));
+  }
+}

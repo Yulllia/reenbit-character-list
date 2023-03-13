@@ -1,25 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Routes, Route } from "react-router-dom";
+import { useRecoilValue } from "recoil";
+import CharacterList from "./components/characterList/CharacterList";
+import DetailCard from "./components/detailPage/DetailCard";
+import Login from "./components/login/Login";
+import { loginState } from "./recoil/atom/filterAtom";
 
 function App() {
+  const userLogin = useRecoilValue(loginState);
+  if (!userLogin) {
+    return <Login />;
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<CharacterList />} />
+      <Route path="/card/:cardId" element={<DetailCard />} />
+    </Routes>
   );
 }
 

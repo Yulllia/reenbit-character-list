@@ -1,0 +1,30 @@
+@mixin svg($width, $height) {
+  width: $width;
+  height: $height;
+}
+
+@mixin text-styled($width, $size, $height, $letter: normal, $color) {
+  font-weight: $width;
+  font-size: $size;
+  line-height: $height;
+  letter-spacing: $letter;
+  color: $color;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+@mixin transform-animation($property, $animation) {
+  -webkit-transform-origin: $property;
+  transform-origin: $property;
+  -webkit-animation: $animation;
+  animation: $animation;
+}
+@mixin loader-style($backround, $border, $top, $left) {
+  background: $backround;
+  border-radius: $border;
+  top: $top;
+  left: $left;
+}
