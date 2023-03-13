@@ -3,6 +3,9 @@
   "proxy": "http://127.0.0.1:5000/",
   "type": "module",
   "version": "0.1.0",
+  "engines": {
+    "node": "14.17.5"
+  },
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
