@@ -63,7 +63,6 @@ function Login() {
           onSuccess={handleLogin}
           onFailure={handleFailure}
           cookiePolicy={"SameSite=None; Secure"}
-          redirectUri="https://reenbit-character-list-9nrd-d7gy38a67-yulllia.vercel.app/"
         ></GoogleLogin>
       )}
       <FacebookLogin
